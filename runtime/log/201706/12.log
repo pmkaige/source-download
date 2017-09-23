@@ -1,0 +1,2249 @@
+[ 2017-06-12T20:34:50+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/info/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html [运行时间：0.127008s][吞吐率：7.87req/s] [内存消耗：5,421.13kb] [文件加载：60]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->info[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\info.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'infos',
+  6 => 'email',
+  7 => 'sourceNum',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_userinfo` WHERE  `uid` = 3 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `email` FROM `ed_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` WHERE  `uid` = 3  AND `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:36:39+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource.html [运行时间：0.122007s][吞吐率：8.20req/s] [内存消耗：5,305.52kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = 3  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = 3  AND `a`.`status` = 1 LIMIT 0,2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:36:43+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/info/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html [运行时间：0.133008s][吞吐率：7.52req/s] [内存消耗：5,421.35kb] [文件加载：60]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->info[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\info.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'infos',
+  6 => 'email',
+  7 => 'sourceNum',
+  8 => 'userid',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_userinfo` WHERE  `uid` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `email` FROM `ed_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` WHERE  `uid` = 3  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:39:14+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/info/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html [运行时间：0.124007s][吞吐率：8.06req/s] [内存消耗：5,421.05kb] [文件加载：60]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->info[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\info.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'infos',
+  6 => 'email',
+  7 => 'sourceNum',
+  8 => 'userid',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_userinfo` WHERE  `uid` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_user` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `email` FROM `ed_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` WHERE  `uid` = 3  AND `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:39:37+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/info/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html [运行时间：0.131008s][吞吐率：7.63req/s] [内存消耗：5,421.06kb] [文件加载：60]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->info[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\info.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'infos',
+  6 => 'email',
+  7 => 'sourceNum',
+  8 => 'userid',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_userinfo` WHERE  `uid` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `email` FROM `ed_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` WHERE  `uid` = 3  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:39:39+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html [运行时间：0.099006s][吞吐率：10.10req/s] [内存消耗：5,564.18kb] [文件加载：63]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 0,2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:39:52+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html [运行时间：0.072005s][吞吐率：13.89req/s] [内存消耗：5,305.16kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 0,2 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:40:52+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html [运行时间：0.108006s][吞吐率：9.26req/s] [内存消耗：5,660.75kb] [文件加载：67]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 0,2 [ RunTime:0.001000s ]
+[ error ] [8]未定义变量: email[F:\wamp\www\ed2k\runtime\temp\0cf195ac94d776240678177a8b35f85e.php:70]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:31+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html [运行时间：0.090005s][吞吐率：11.11req/s] [内存消耗：5,603.11kb] [文件加载：63]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 0,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 3 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:35+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/category/lst/id/8.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/category/lst/id/8.html [运行时间：0.180011s][吞吐率：5.56req/s] [内存消耗：5,596.88kb] [文件加载：63]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->lst[ F:\wamp\www\ed2k\application\index\controller\Category.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\category\lst.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'sonRes',
+  6 => 'id',
+  7 => 'artRes',
+  8 => 'currentPage',
+  9 => 'lastPage',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 8 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `cate_id` IN (26,11,10,27,8)  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `cate_id` IN (26,11,10,27,8)  AND `a`.`status` = 1 ORDER BY id desc LIMIT 0,2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:38+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/article/index/aid/21.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/article/index/aid/21.html [运行时间：0.154009s][吞吐率：6.49req/s] [内存消耗：5,470.48kb] [文件加载：60]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/category/lst/id/8.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '21',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ F:\wamp\www\ed2k\application\index\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\article\index.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'arts',
+  6 => 'uid',
+  7 => 'class',
+  8 => 'zanNum',
+  9 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.003000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 21 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.013001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `a`.*,`u`.`uname` FROM `ed_article` `a` INNER JOIN `ed_userinfo` `u` ON `a`.`uid`=`u`.`uid` WHERE  `a`.`id` = '21' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_point` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_point` WHERE  `uid` = 3  AND `article_id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_point` WHERE  `article_id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:39+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/article/index/aid/ZeroClipboard.swf
+[ log ] 127.0.0.1/ed2k/public/index.php/index/article/index/aid/ZeroClipboard.swf [运行时间：0.122007s][吞吐率：8.20req/s] [内存消耗：5,103.52kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/article/index/aid/21.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'aid' => 'ZeroClipboard.swf',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ F:\wamp\www\ed2k\application\index\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\article\index.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'arts',
+  6 => 'uid',
+  7 => 'class',
+  8 => 'zanNum',
+  9 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`u`.`uname` FROM `ed_article` `a` INNER JOIN `ed_userinfo` `u` ON `a`.`uid`=`u`.`uid` WHERE  `a`.`id` = 'ZeroClipboard.swf' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_point` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_point` WHERE  `uid` = 3  AND `article_id` = 0 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_point` WHERE  `article_id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:40+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/info/uid/1.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/info/uid/1.html [运行时间：0.104006s][吞吐率：9.61req/s] [内存消耗：5,165.61kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/article/index/aid/21.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->info[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\info.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'infos',
+  6 => 'email',
+  7 => 'sourceNum',
+  8 => 'userid',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `email` FROM `ed_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:46+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html [运行时间：0.096005s][吞吐率：10.42req/s] [内存消耗：5,350.05kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/info/uid/1.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 0,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:51+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=2
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=2 [运行时间：0.101006s][吞吐率：9.90req/s] [内存消耗：5,339.23kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 2,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:52+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=3
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3 [运行时间：0.107006s][吞吐率：9.35req/s] [内存消耗：5,340.36kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=2',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 4,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:42:54+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=4
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4 [运行时间：0.113007s][吞吐率：8.85req/s] [内存消耗：5,377.52kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '4',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024002s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 6,2 [ RunTime:0.009000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:11+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/article/index/aid/19.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/article/index/aid/19.html [运行时间：0.119007s][吞吐率：8.40req/s] [内存消耗：5,280.88kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '19',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ F:\wamp\www\ed2k\application\index\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\article\index.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'arts',
+  6 => 'uid',
+  7 => 'class',
+  8 => 'zanNum',
+  9 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `a`.*,`u`.`uname` FROM `ed_article` `a` INNER JOIN `ed_userinfo` `u` ON `a`.`uid`=`u`.`uid` WHERE  `a`.`id` = '19' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_point` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_point` WHERE  `uid` = 3  AND `article_id` = 19 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_point` WHERE  `article_id` = 19 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:12+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/article/index/aid/ZeroClipboard.swf
+[ log ] 127.0.0.1/ed2k/public/index.php/index/article/index/aid/ZeroClipboard.swf [运行时间：0.084005s][吞吐率：11.90req/s] [内存消耗：5,103.52kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/article/index/aid/19.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'aid' => 'ZeroClipboard.swf',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ F:\wamp\www\ed2k\application\index\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\article\index.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'arts',
+  6 => 'uid',
+  7 => 'class',
+  8 => 'zanNum',
+  9 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`u`.`uname` FROM `ed_article` `a` INNER JOIN `ed_userinfo` `u` ON `a`.`uid`=`u`.`uid` WHERE  `a`.`id` = 'ZeroClipboard.swf' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_point` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_point` WHERE  `uid` = 3  AND `article_id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_point` WHERE  `article_id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:13+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=4
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4 [运行时间：0.096005s][吞吐率：10.42req/s] [内存消耗：5,377.52kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '4',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 6,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:14+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/article/index/aid/20.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/article/index/aid/20.html [运行时间：0.168009s][吞吐率：5.95req/s] [内存消耗：5,197.46kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '20',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ F:\wamp\www\ed2k\application\index\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\article\index.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'arts',
+  6 => 'uid',
+  7 => 'class',
+  8 => 'zanNum',
+  9 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `a`.*,`u`.`uname` FROM `ed_article` `a` INNER JOIN `ed_userinfo` `u` ON `a`.`uid`=`u`.`uid` WHERE  `a`.`id` = '20' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_point` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_point` WHERE  `uid` = 3  AND `article_id` = 20 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_point` WHERE  `article_id` = 20 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:15+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/article/index/aid/ZeroClipboard.swf
+[ log ] 127.0.0.1/ed2k/public/index.php/index/article/index/aid/ZeroClipboard.swf [运行时间：0.088005s][吞吐率：11.36req/s] [内存消耗：5,103.52kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/article/index/aid/20.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'aid' => 'ZeroClipboard.swf',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ F:\wamp\www\ed2k\application\index\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\article\index.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'arts',
+  6 => 'uid',
+  7 => 'class',
+  8 => 'zanNum',
+  9 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`u`.`uname` FROM `ed_article` `a` INNER JOIN `ed_userinfo` `u` ON `a`.`uid`=`u`.`uid` WHERE  `a`.`id` = 'ZeroClipboard.swf' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_point` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_point` WHERE  `uid` = 3  AND `article_id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_point` WHERE  `article_id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:15+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=4
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4 [运行时间：0.109006s][吞吐率：9.17req/s] [内存消耗：5,377.52kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '4',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 6,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:18+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=3
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3 [运行时间：0.087005s][吞吐率：11.49req/s] [内存消耗：5,340.36kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 4,2 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:20+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/article/index/aid/18.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/article/index/aid/18.html [运行时间：0.215012s][吞吐率：4.65req/s] [内存消耗：5,196.35kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '18',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ F:\wamp\www\ed2k\application\index\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\article\index.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'arts',
+  6 => 'uid',
+  7 => 'class',
+  8 => 'zanNum',
+  9 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `a`.*,`u`.`uname` FROM `ed_article` `a` INNER JOIN `ed_userinfo` `u` ON `a`.`uid`=`u`.`uid` WHERE  `a`.`id` = '18' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_point` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_point` WHERE  `uid` = 3  AND `article_id` = 18 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_point` WHERE  `article_id` = 18 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:22+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=3
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3 [运行时间：0.112006s][吞吐率：8.93req/s] [内存消耗：5,340.36kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 4,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:23+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/article/index/aid/16.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/article/index/aid/16.html [运行时间：0.102006s][吞吐率：9.80req/s] [内存消耗：5,196.57kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '16',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ F:\wamp\www\ed2k\application\index\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\article\index.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'arts',
+  6 => 'uid',
+  7 => 'class',
+  8 => 'zanNum',
+  9 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_id` FROM `ed_article` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` WHERE  `id` = 8 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `a`.*,`u`.`uname` FROM `ed_article` `a` INNER JOIN `ed_userinfo` `u` ON `a`.`uid`=`u`.`uid` WHERE  `a`.`id` = '16' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_point` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_point` WHERE  `uid` = 3  AND `article_id` = 16 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_point` WHERE  `article_id` = 16 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:43:25+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=3
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3 [运行时间：0.109007s][吞吐率：9.17req/s] [内存消耗：5,340.36kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 4,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:46:26+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/1.html?page=3
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3 [运行时间：0.136008s][吞吐率：7.35req/s] [内存消耗：5,600.15kb] [文件加载：63]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=4',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+  9 => 'userid',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '1'  AND `a`.`status` = 1 LIMIT 4,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:46:30+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/info/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html [运行时间：0.119007s][吞吐率：8.40req/s] [内存消耗：5,165.55kb] [文件加载：58]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/1.html?page=3',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->info[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\info.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'infos',
+  6 => 'email',
+  7 => 'sourceNum',
+  8 => 'userid',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_userinfo` WHERE  `uid` = 3 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `email` FROM `ed_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` WHERE  `uid` = 3  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:46:32+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/mysource/uid/3.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html [运行时间：0.098006s][吞吐率：10.20req/s] [内存消耗：5,343.25kb] [文件加载：61]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'mysource',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/info/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->mySource[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\mysource.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'artRes',
+  6 => 'currentPage',
+  7 => 'lastPage',
+  8 => 'uname',
+  9 => 'userid',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`cate_name` FROM `ed_article` `a` INNER JOIN `ed_cate` `c` ON `a`.`cate_id`=`c`.`id` WHERE  `a`.`uid` = '3'  AND `a`.`status` = 1 LIMIT 0,2 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_userinfo` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `uname` FROM `ed_userinfo` WHERE  `uid` = 3 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-06-12T20:46:51+08:00 ] 127.0.0.1 127.0.0.1 GET /ed2k/public/index.php/index/member/editinfo.html
+[ log ] 127.0.0.1/ed2k/public/index.php/index/member/editinfo.html [运行时间：0.101006s][吞吐率：9.90req/s] [内存消耗：5,347.21kb] [文件加载：60]
+[ info ] [ LANG ] F:\wamp\www\ed2k\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'editinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/ed2k/public/index.php/index/member/mysource/uid/3.html',
+  'cookie' => 'Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1495546959,1496469174,1496549435; Hm_lvt_b5ae3f71dfe5f06a9dd4dc55087f27d1=1496326554,1496754035,1496916735,1496981075; CNZZDATA2076168=cnzz_eid%3D2138325128-1488621067-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1488626481; ECS[visit_times]=4; UM_distinctid=15b42a37f1118f-0c9e4fbf90ff5-47534130-1fa400-15b42a37f12283; CNZZDATA726388=cnzz_eid%3D1468040495-1491468025-%26ntime%3D1492926025; CNZZDATA947842=cnzz_eid%3D900007543-1492349940-null%26ntime%3D1497242238; bdshare_firstime=1492352785249; CNZZDATA1260327944=345544524-1495008067-http%253A%252F%252F127.0.0.1%252F%7C1495008067; Hm_lvt_5f5a95758129ff157ca4d0d7afabff18=1496049920,1496916798,1496981100; PHPSESSID=8eudcgaakd6q8upkqd56okbc64',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Member->editInfo[ F:\wamp\www\ed2k\application\index\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\wamp\www\ed2k\public/../application/index\view\member\editinfo.html [ array (
+  0 => 'topNav',
+  1 => 'bottomNav',
+  2 => 'cateid',
+  3 => 'pid',
+  4 => 'position',
+  5 => 'uinfos',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_cate` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 1 ORDER BY sort desc [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `ed_cate` WHERE  `pid` = 0  AND `pos` = 2 ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`cate_name`,`pid` FROM `ed_cate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=ed2k;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ed_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `u`.`email`,`u`.`id`,`i`.`uname`,`i`.`birthday`,`i`.`sex`,`i`.`qq`,`i`.`sign` FROM `ed_user` `u` INNER JOIN `ed_userinfo` `i` ON `u`.`id`=`i`.`uid` WHERE  `u`.`id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------

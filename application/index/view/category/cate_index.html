@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ThinkPHP学习交流及资料下载群：489486454" />
+	<meta name="description" content="ThinkPHP学习交流及资料下载群：489486454">
+	<title>ThinkPHP学习交流及资料下载群：489486454</title>
+  <link rel="stylesheet" type="text/css" href="__index__/css/Default.css" />
+  <script language="javascript" type="text/javascript" src="__index__/js/global.js"></script>
+</head>
+
+<body>
+{include file="common/head"}
+<script>AD_Global_960x60()</script>
+<div style="height:5px;"></div>
+
+
+
+
+<div class="topsearch">
+  <div class="title"></div>
+  <div class="inpbox">
+    <form name="searchForm" action="{:url('Search/lst')}" method="Post">
+      关键字：<input class="searchtxt" type="text" name="key" value="" size="15" baiduSug="1"/><input type=submit value=" 搜索 " />
+    </form>
+  </div>
+</div>
+
+<div style="height:10px;"></div>
+
+
+<div style="float:left" class="CurrentLocation"><b>您的位置：</b>
+<a href="{:url('index/index')}">首页</a> 
+{volist name="position" id="pos"}
+{if condition="$pos['pid'] eq 0"}
+>> <a href="{:url('Category/lst',array('id'=>$pos['id']))}">{$pos.cate_name}</a>
+{else /}
+>> <a href="{:url('Category/lst',array('id'=>$pos['pid'],'sid'=>$pos['id']))}">{$pos.cate_name}</a>
+{/if}
+{/volist}
+</div>
+<div style="height:10px;"></div>
+
+<div style="clear:both;">
+  {$cates.content}
+</div>
+
+
+
+
+<div class="clr"></div>
+<div style="height:10px;"></div>
+
+{include file="common/footer"}
+</body>
+<!--(0)页面处理时间：.14 缓存更新时间：2017/4/14 20:03:58-->
+</html>

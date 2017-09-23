@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ThinkPHP学习交流及资料下载群：489486454" />
+	<meta name="description" content="ThinkPHP学习交流及资料下载群：489486454">
+	<title>ThinkPHP学习交流及资料下载群：489486454</title>
+  <link rel="stylesheet" type="text/css" href="__index__/css/Default.css" />
+  <script language="javascript" type="text/javascript" src="__index__/js/global.js"></script>
+</head>
+
+<body>
+{include file="common/head"}
+<script>AD_Global_960x60()</script>
+<div style="height:5px;"></div>
+
+
+
+
+<div class="topsearch">
+  <div class="title"></div>
+  <div class="inpbox">
+    <form name="searchForm" action="{:url('Search/lst')}" method="Post">
+      关键字：<input class="searchtxt" type="text" name="key" value="" size="15" baiduSug="1"/><input type=submit value=" 搜索 " />
+    </form>
+  </div>
+</div>
+
+<div style="height:10px;"></div>
+
+
+<div style="float:left" class="CurrentLocation"><b>您的位置：</b>
+<a href="{:url('index/index')}">首页</a> 
+>><a href="#">{$uname}的资源</a>
+
+</div>
+<div style="float:right; width:70px; padding-right:0px"><img src="http://img.ed2000.com/Images/音乐.jpg" alt="音乐" /></div>
+
+
+
+
+<table width="100%" border="0" cellspacing="1" cellpadding="5" class="commonListArea">
+  <tr class="commonListTitle">
+    <td colspan=5>资源列表</td>
+  </tr>
+  <tr class="commonListCell" align="center">
+    <td>标题</td>
+
+    <td width="80">发布日期</td>
+    <td width="130">最后更新</td>
+    <td width="70">大小</td>
+    {if condition="$Think.session.uid eq $userid"}
+    <td width="70">操作</td>
+    {/if}
+  </tr>
+  {volist name="artRes" id="arts"}
+  <tr class="commonListCell">
+
+    <td>[<a href="#">{$arts.cate_name}</a>] <a href="{:url('Article/index',array('aid'=>$arts['id']))}">{$arts.title}</a>
+    <?php if((time()-$arts['addtime']) < 86400):?>
+    <img src="http://img.ed2000.com/Images/new.gif" alt="最新资源" /> 
+    <?php endif;?>
+    <?php if($arts['click'] > 1000):?>
+    <img src="http://img.ed2000.com/Images/hot.gif" alt="热门资源" /></td>
+    <?php endif;?>
+
+    <td align="center">{$arts.addtime | date="Y/m/d",###}</td>
+    <td align="center">{$arts.updatetime | date="Y/m/d H:i:s",###}</td>
+    <td align="center">
+      {if condition="$arts['size'] eq 'cl'"}
+        <img src="__index__/img/cili.gif" height="14">
+      {elseif condition="$arts['size'] eq 'wp'"}
+        <img src="__index__/img/bdp.png" height="14">
+      {elseif condition="$arts['size'] eq 'xl'"}
+        <img src="__index__/img/xl.png" height="14">
+      {else/}
+        <?php echo jsSzie($arts['size']);?>
+      {/if}
+    </td>
+    {if condition="$Think.session.uid eq $userid"}
+    <td><a href="{:url('Member/editSource',array('aid'=>$arts['id']))}">编辑</a>|<a onclick="return confirm('确定删除该资源？');" href="{:url('Member/delSource',array('aid'=>$arts['id']))}">删除</a></td>
+    {/if}
+  </tr>
+  {/volist}
+</table>
+<div style="padding:5px;">{$artRes->render($currentPage,$lastPage)}</div>
+
+
+
+<div style="height:10px;"></div>
+
+
+<div class="clr"></div>
+<div style="height:10px;"></div>
+
+{include file="common/footer"}
+</body>
+<!--(0)页面处理时间：.14 缓存更新时间：2017/4/14 20:03:58-->
+</html>

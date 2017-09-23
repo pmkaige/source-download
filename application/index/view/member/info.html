@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="ThinkPHP学习交流及资料下载群：489486454" />
+	<meta name="description" content="ThinkPHP学习交流及资料下载群：489486454">
+	<title>ThinkPHP学习交流及资料下载群：489486454</title>
+	<link rel="stylesheet" type="text/css" href="__index__/css/Default.css" />
+	<script language="javascript" type="text/javascript" src="__index__/js/global.js"></script>
+</head>
+
+<body>
+{include file="common/head"}
+<div class="CurrentLocation"><b>您的位置：</b><a href="/">首页</a> >> <a href="javascript:;">查看 {$infos.uname} 的资料</a></div>
+<div style="height:10px;"></div>
+
+<table width="100%" cellspacing="0" cellpadding="0"><tr><td width="600">
+
+
+<div class="bdgray" style="float:left;width:600px;">
+	<dl class="Sbox_1">
+		<dt class="title"><span><strong>个人资料</strong></span></dt>
+		<dd>昵称：{$infos.uname}</dd>
+		<dd>性别：{if condition="$infos['sex'] eq 0"} 保密 {elseif condition="$infos['sex'] eq 1"} 男 {else} 女 {/if}</dd>
+		<dd>发布权限：{if condition="$infos['power_status'] eq 1"} 正常 {else/} 禁止发布 {/if}</dd>
+		<dd>发布资源：{$sourceNum}</dd>
+		<dd>活跃天数：{$infos.live_day}</dd>
+		<dd>注册日期：{$infos.regtime|date="Y-m-d H:i:s",###}</dd>
+		<dd>所在地区：{$infos.adress}</dd>
+		<dd>最后登录：{$infos.lasttime|date="Y-m-d H:i:s",###}</dd>
+		<dd>相关操作：<a href="{:url('Member/mySource',array('uid'=>$userid))}" title="搜索 {$infos.uname} 发布的资源"><img border="0" src="http://img.ed2000.com/Images/search.gif"></a> <a href="mailto:{$email}" title="给 2119521240 发送邮件"><img border="0" src="http://img.ed2000.com/Images/email.gif"></a> 
+
+
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$infos.qq}&site=ed2000&menu=yes" title="点击这里给我发QQ消息"><img border="0" src="http://wpa.qq.com/pa?p=2:2119521240:45"></a>
+
+
+		</dd>
+
+	</dl>
+</div>
+
+</td><td align="center"><script type="text/javascript">BAIDU_CLB_fillSlot("676505");</script></td></tr></table>
+<div class="clr"></div>
+<div style="height:10px;"></div>
+<div class="bdgray">
+	<dl class="Sbox_1">
+		<dt class="title"><span><strong> 签 名 </strong></span></dt>
+		<dd><div style="width:960px;overflow:hidden;">{$infos.sign}</div></dd>
+	</dl>
+</div>
+<br>
+<div class="clr"></div>
+<div style="height:10px;"></div>
+{include file="common/footer"}
+</body>
+<!--(0)页面处理时间：.09 缓存更新时间：2017/4/14 20:03:58-->
+</html>

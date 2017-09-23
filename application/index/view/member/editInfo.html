@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="ThinkPHP学习交流及资料下载群：489486454" />
+	<meta name="description" content="ThinkPHP学习交流及资料下载群：489486454">
+	<title>ThinkPHP学习交流及资料下载群：489486454</title>
+	<link rel="stylesheet" type="text/css" href="__index__/css/Default.css" />
+	<script language="javascript" type="text/javascript" src="__index__/js/global.js"></script>
+</head>
+
+<body>
+<div class="header">
+	{include file="common/head"}
+<script type="text/javascript" src="__index__/js/calendar.js"></script>
+<script language="javascript">
+
+function checkinput(form){
+
+
+
+	if(form.password.value.length>0 && form.password.value.length<6){
+		alert('密码必须至少包含 6 个字符');
+		form.password.focus();
+		return false;
+	}
+	if(form.dopassword.value.length>0 && form.dopassword.value.length<6){
+		alert('请再次输入密码');
+		form.dopassword.focus();
+		return false;
+	}
+	if(form.password.value != form.dopassword.value){
+		alert("两次输入的密码不同，请返回重新输入");
+		form.password.focus();
+		return false;
+	}
+	return true;
+}
+
+</script>
+
+
+
+<div class="CurrentLocation"><b>您的位置：</b><a href="/">首页</a> >> <a href="/UserPannel.asp">控制面版</a></div>
+<div style="height:10px;"></div>
+
+<div class="MenuTag"><li id="Tag_btn_0" onclick="ShowPannel(this)" class="NowTag">基本资料</li><li id="Tag_btn_1" onclick="ShowPannel(this)">资源统计</li></div>
+<table id="Tag_tab_0" cellspacing=3 cellpadding=5 width="100%" class="PannelBody" style="display:block;table-layout:fixed;overflow:hidden;">
+<form method="post" action="" onsubmit="return checkinput(this);">
+<input type="hidden" name="id" value="{$uinfos.id}">
+	<tr><td width="20%" align=right>帐号：</td><td><input type="text" class="input w_240" name="email" id="email" value="{$uinfos.email}" readonly="readonly" />　帐号在ED2000用户登陆时使用，一旦生成，不可更改。</td></tr>
+	<tr><td width="20%" align=right>昵称：</td><td><input type="text" class="input w_240" name="uname" id="uname" value="{$uinfos.uname}" /></td></tr>
+	<tr><td width="20%" align=right>生日：</td><td><input class="input w_240" onclick="showcalendar(event, this)" onfocus="showcalendar(event, this)" size=24 value="{$uinfos.birthday}" name="birthday" /></td></tr>
+	<tr><td width="20%" align=right>性别：</td><td><select size=1 name="sex">
+				<option {if condition="$uinfos['sex'] eq 0"} selected="selected" {/if} value=0>保密</option>
+				<option {if condition="$uinfos['sex'] eq 1"} selected="selected" {/if} value=1 >男</option>
+				<option {if condition="$uinfos['sex'] eq 2"} selected="selected" {/if} value=2 >女</option>
+			</select></td></tr>
+	<tr><td width="20%" align=right>ＱＱ：</td><td><input type="text" class="input w_240" name="qq" id="qq" value="{$uinfos.qq}" /></td></tr>
+	<tr><td width="20%" align=right>密码：</td><td><input name="password" id="password" class="input w_240" maxlength="16" type="password" /><em id="checkpasswd" style="display: none; color:#F00;"></em>　密码如不修改，请不要填写本项 </td></tr>
+	<tr><td width="20%" align=right>确认密码：</td><td><input name="dopassword" class="input w_240" maxlength="16" type="password" /><em id="checkpasswd1" style="display: inline; color:#F00;"></em>　与 密码 相同</td></tr>
+	<tr><td width="20%" align=right valign=top>用户签名：<br><br><b><font color="red">禁止插入网盘地址</font></b>
+</td><td><textarea name="sign" style="WIDTH: 600px; HEIGHT: 100px">{$uinfos.sign}</textarea></td></tr>
+	<tr><td align="center" colspan="2"><input type="submit" value=" 确定 " /> </td></tr>
+</form>        
+</table>
+
+
+
+
+<table id="Tag_tab_1" cellspacing=3 cellpadding=5 width="100%" class="PannelBody" style="display:none;">
+	<tr><td align=center colspan=2>以下是近三月以来，您发布的资源统计情况</td></tr>
+	<tr><td width="20%" align=right>{$Tfirstday|date="Y年m月",###}</td><td>{$TrightSoruceNum} / {$TallSoruceNum} 条</td></tr>
+	<tr><td width="20%" align=right>{$Lfirstday|date="Y年m月",###}</td><td>{$LrightSoruceNum} / {$LallSoruceNum} 条</td></tr>
+	<tr><td width="20%" align=right>{$BLfirstday|date="Y年m月",###}</td><td>{$BLrightSoruceNum} / {$BLallSoruceNum} 条</td></tr>
+</table>
+
+
+
+<div class="clr"></div>
+<div style="height:10px;"></div>
+
+{include file="common/footer"}
+</body>
+<!--(0)页面处理时间：.66 缓存更新时间：2017/4/14 20:03:58-->
+</html>

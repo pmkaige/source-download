@@ -1,0 +1,39 @@
+<div class="header">
+	<div class="logo"><a href="/" class="ed2000logo" title="ED2000资源共享"></a></div>
+	<div class="banner">
+	<span>本站源码将持续完善更新，问题反馈及源码下载请加群：</span> 
+	<span style="color:#f00;">170111861</span> | 
+	<span><a style="color:#f00;" target="_blank" href="https://chuanke.baidu.com/s2260700.html">点击查看本站开发视频教程</a></span> | 
+{if condition="$Think.session.uname"}
+	你好 <a href="{:url('Member/info',array('uid'=>$Think.session.uid))}">{$Think.session.uname}</a>，欢迎登录 
+<a href="{:url('Member/editinfo')}">控制面板</a> <a href="{:url('Member/logout')}">退出</a><br>
+{else/}
+<a href="{:url('index/User/reg')}">注册</a> <a href="{:url('index/User/login')}">登录</a><br>
+{/if}
+	</div>
+</div>
+
+
+<div class="topmenu">
+	<ul>
+		<li><a href="{:url('Index/index')}">首页</a></li>
+		{volist name="topNav" id="cate"}
+		<li><a {if condition="$cate['id'] eq $cateid or $cate['id'] eq $pid"} class="thisclass" {/if} href="{:url('category/lst',array('id'=>$cate['id']))}">{$cate.cate_name}</a></li>
+		{/volist}
+		{if condition="$Think.session.uname"}
+		<li><a href="{:url('Member/mySource',array('uid'=>$Think.session.uid))}">我的资源</a></li>
+		<li><a href="{:url('Member/source')}">发布资源</a></li>
+		{else/}
+		<li><a href="{:url('index/User/reg')}">注册</a></li>
+		<li><a href="{:url('index/User/login')}">登录</a></li>
+		{/if}
+
+
+	</ul>
+</div>
+
+
+
+
+
+<div style="height:5px;"></div>

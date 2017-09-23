@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="ThinkPHP学习交流及资料下载群：489486454" />
+	<meta name="description" content="ThinkPHP学习交流及资料下载群：489486454">
+	<title>ThinkPHP学习交流及资料下载群：489486454</title>
+	<link rel="stylesheet" type="text/css" href="__index__/css/Default.css" />
+	<script language="javascript" type="text/javascript" src="__index__/js/global.js"></script>
+</head>
+
+<body>
+{include file="common/head"}
+<div style="height:5px;"></div>
+
+
+
+
+
+<div class="CurrentLocation"><b>您的位置：</b><a href="/">首页</a> >> <a href="/register.asp">用户注册</a></div>
+
+<form method="post" action="" onsubmit="return checkinput(this);">
+<div class="reg">
+	<h4>基本信息</h4>
+	<p>
+		<label for="name">*电子邮件地址：</label>
+		<span class="sfl"><input type="text" class="input w_240" name="email" id="email" onBlur="checkEmail(this.value)" /><em id="checkmail" style="display: none;"></em></span>
+		<span class="sfr">ED2000采用电子邮箱作为帐号，用户登录时使用。</span>
+	</p>
+
+	<p>
+		<label for="pw">*密码：</label>
+		<span class="sfl"><input name="password" id="password" class="input w_240" maxlength="16" type="password" /><em id="checkpasswd" style="display: none;"></em></span>
+		<span class="sfr">请输入长度为6-16个字符，建议采用字母数字组合方式</span>
+	</p>
+	<p>
+		<label for="pw1">*确认密码：</label>
+		<span class="sfl"><input name="dopassword" class="input w_240" maxlength="16" type="password" /><em id="checkpasswd1" style="display: none;">x确认密码不能为空!</em></span>
+		<span class="sfr">请再次输入密码</span>
+	</p>
+
+	<p>
+		<label for="name">昵称：</label>
+		<span class="sfl"><input type="text" class="input w_240" name="uname" id="uname" /></span>
+		<span class="sfr"></span>
+	</p>
+	<p>
+		<label for="name">性别：</label>
+		<span class="sfl"><select size=1 name="sex">
+				<option value=0 selected="selected">保密</option>
+				<option value=1>男</option>
+				<option value=2>女</option>
+			</select></span>
+		<span class="sfr"></span>
+	</p>
+	<p>
+		<label for="name">ＱＱ：</label>
+		<span class="sfl"><input type="text" class="input w_240" name="qq" id="qq" /></span>
+		<span class="sfr"></span>
+	</p>
+
+
+	<p>
+		<label for="name">验证码：</label>
+		<span class="sfl"><input type="text" class="input" name="verifycode" style="width:80px" /> <span><img src="{:captcha_src()}" style="cursor:pointer;" onclick="this.src='{:captcha_src()}?'+Math.random()" /></span></span>
+		<span class="sfr"></span>
+	</p>
+
+    
+	<div class="action"><input type="image" src="http://img.ed2000.com/Images/sub_btn.gif" title="注册" /></div>
+</div>
+</form>
+
+<div class="clr"></div>
+<div style="height:10px;"></div>
+
+{include file="common/footer"}
+</body>
+<!--(0)页面处理时间：.00 缓存更新时间：2017/4/14 20:03:58-->
+</html>

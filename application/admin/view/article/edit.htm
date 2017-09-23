@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html><head>
+        <meta charset="utf-8">
+    <title>ThinkPHP5.0</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__admin__/style/bootstrap.css" rel="stylesheet">
+    <link href="__admin__/style/font-awesome.css" rel="stylesheet">
+    <link href="__admin__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__admin__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__admin__/style/demo.css" rel="stylesheet">
+    <link href="__admin__/style/typicons.css" rel="stylesheet">
+    <link href="__admin__/style/animate.css" rel="stylesheet">
+    <script src="__admin__/style/jquery_002.js"></script>
+    <script src="__admin__/plus/ueditor/ueditor.config.js"></script>
+    <script src="__admin__/plus/ueditor/ueditor.all.min.js"></script>
+    <script src="__admin__/plus/ueditor/lang/zh-cn/zh-cn.js"></script>
+    
+</head>
+<body>
+    <!-- 头部 -->
+        {include file="common/head"}
+    <!-- /头部 -->
+    
+    <div class="main-container container-fluid">
+        <div class="page-container">
+            <!-- Page Sidebar -->
+                {include file="common/left"}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="{:url('Index/index')}">系统</a>
+                    </li>
+                                        <li>
+                        <a href="{:url('lst')}">文章管理</a>
+                    </li>
+                                        <li class="active">添加文章</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新增文章</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post"> 
+                        <input type="hidden" name="uid" value="{$arts.uid}">
+                        <input type="hidden" name="id" value="{$arts.id}">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">文章标题</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" placeholder="" value="{$arts.title}" name="title"  type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">审核状态</label>
+                            <div class="col-sm-6">
+                                <div class="radio">
+                                    <label>
+                                        <input name="status" value="1" {if condition="$arts['status'] eq 1"} checked="checked" {/if} class="inverted" type="radio">
+                                        <span class="text">通过</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input name="status" value="2" {if condition="$arts['status'] eq 2"} checked="checked" {/if} type="radio">
+                                        <span class="text">待审</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input name="status" value="3" {if condition="$arts['status'] eq 3"} checked="checked" {/if} type="radio">
+                                        <span class="text">不通过</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="group_id" class="col-sm-2 control-label no-padding-right">所属栏目</label>
+                            <div class="col-sm-6">
+                                <select name="cate_id" style="width: 100%;">
+                                    {volist name="cateRes" id="cate"}
+                                    <option {if condition="$arts['cate_id'] eq $cate['id']"} selected="selected" {/if} value="{$cate.id}"><?php echo str_repeat('-',$cate['level']*8);?>{$cate.cate_name}</option>
+                                    {/volist}
+                                </select>
+                            </div>
+                        </div> 
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">关键词</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" placeholder="" value="{$arts.keywords}" name="keywords"  type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">文章描述</label>
+                            <div class="col-sm-6">
+                                <textarea  class="form-control" name="desc">{$arts.desc}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">TAG标签</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" placeholder="" name="tags" value="{$arts.tags}"  type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 多个“,”分隔</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">资源类型</label>
+                            <div class="col-sm-6">
+                                <div class="radio">
+                                    <label>
+                                        <input name="type" value="1" {if condition="$arts['type'] eq 1"} checked="checked" {/if} class="inverted" type="radio">
+                                        <span class="text">ed2k资源</span>
+                                    </label>
+                                    <span class="red">ed2k资源</span>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input name="type" value="4" {if condition="$arts['type'] eq 4"} checked="checked" {/if} class="inverted" type="radio">
+                                        <span class="text">迅雷地址</span>
+                                    </label>
+                                    <span class="red">独立迅雷地址之间使用'@@'分割</span>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input name="type" value="2" {if condition="$arts['type'] eq 2"} checked="checked" {/if} type="radio">
+                                        <span class="text">磁力资源</span>
+                                    </label>
+                                    <span class="red">独立磁力资源之间使用'@@'分割</span>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input name="type" value="3" {if condition="$arts['type'] eq 3"} checked="checked" {/if} type="radio">
+                                        <span class="text">网盘资源</span>
+                                    </label>
+                                    <span class="red">独立网盘资源之间使用'@@'分割，网盘链接和对应密码之间使用'|'分割</span>
+                                </div>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">资源地址</label>
+                            <div class="col-sm-6">
+                                <textarea  class="form-control" name="dowurl">{$arts.dowurl}</textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">文章内容</label>
+                            <div class="col-sm-6">
+                                <textarea id="content" name="content">{$arts.content}</textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">点击数</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" placeholder="" value="{$arts.click}" name="click"  type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>  
+    </div>
+
+        <!--Basic Scripts-->
+    
+    <script src="__admin__/style/bootstrap.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__admin__/style/beyond.js"></script>
+    <script type="text/javascript">
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    UE.getEditor('content',{initialFrameWidth:900,initialFrameHeight:400,});
+    </script>
+
+
+</body></html>
